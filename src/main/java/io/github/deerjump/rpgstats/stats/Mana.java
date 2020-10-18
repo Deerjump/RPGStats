@@ -9,11 +9,12 @@ import java.util.TimerTask;
 public class Mana implements Stat {
     private static final double MAXMANA = 100;
     private double value;
-    private Timer regenTimer;
+    private final Timer regenTimer;
 
     public Mana(){
         regenTimer = new Timer();
         setValue(MAXMANA);
+        startRegen();
     }
 
     @Override
@@ -24,7 +25,7 @@ public class Mana implements Stat {
     @Override
     public void setValue(double value) {
         if(value > 0)
-            this.value = value > MAXMANA ? MAXMANA: value;
+            this.value = Math.min(value, MAXMANA);
         else
             this.value = 0;
     }
@@ -33,9 +34,10 @@ public class Mana implements Stat {
         regenTimer.schedule(new TimerTask() {
             @Override
             public void run() {
+                if(value == MAXMANA) return;
                 setValue(getValue() + MAXMANA * 0.05); //probably make an addValue()
             }
-        },0,1);
+        },0,1000);
     }
 
     public void stopRegen(){

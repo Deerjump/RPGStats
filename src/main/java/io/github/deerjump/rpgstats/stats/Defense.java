@@ -8,10 +8,8 @@ public class Defense implements Stat{
     }
 
     public void setValue(double value) {
-        this.value = value;
+        this.value = Math.max(value,0);
     }
 
-    public double calculateReduction(double damage){
-        return damage * 100 /(100 + value);
-    }
+    public double calculateReduction(double damage){return damage * 100 /(100 + value);}
 }

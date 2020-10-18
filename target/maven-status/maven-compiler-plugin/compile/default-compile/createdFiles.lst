@@ -1,0 +1,11 @@
+io\github\deerjump\rpgstats\stats\PlayerStats.class
+io\github\deerjump\rpgstats\stats\HP.class
+io\github\deerjump\rpgstats\RPGStats.class
+io\github\deerjump\rpgstats\stats\Stat.class
+io\github\deerjump\rpgstats\stats\HP$1.class
+io\github\deerjump\rpgstats\stats\Mana$1.class
+io\github\deerjump\rpgstats\listeners\EntityListener.class
+io\github\deerjump\rpgstats\stats\PlayerStats$1.class
+io\github\deerjump\rpgstats\listeners\PlayerListener.class
+io\github\deerjump\rpgstats\stats\Defense.class
+io\github\deerjump\rpgstats\stats\Mana.class
