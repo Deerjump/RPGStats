@@ -1,0 +1,5 @@
+main: io.github.deerjump.rpgstats.RPGStats
+name: RPGStats
+version: 1.0
+author: Deerjump
+api-version: 1.16
